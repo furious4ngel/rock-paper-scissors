@@ -40,3 +40,27 @@ function playRound(playerSelection, computerSelection) {
     return `Draw! You both chose ${computerSelection}!`;
   }
 }
+
+function game() {
+  console.clear();
+  
+  for (let roundNumber = 1; roundNumber <= 5; roundNumber++) {
+    let playerSelection = playerPlay();
+    let computerSelection = computerPlay();
+
+    let roundResult = playRound(playerSelection, computerSelection);
+
+    console.log(`Round ${roundNumber}: ${roundResult}`);
+  }
+
+  if (playerScore > computerScore) {
+    console.log(`You win with the score ${playerScore}-${computerScore}!`);
+  } else if (computerScore > playerScore) {
+    console.log(`You lost with the score ${playerScore}-${computerScore}!`);
+  } else {
+    console.log(`It's a draw with the score ${playerScore}-${computerScore}!`);
+  }
+}
+game();
+
+
