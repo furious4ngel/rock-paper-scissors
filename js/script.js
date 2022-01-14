@@ -13,8 +13,20 @@ function computerPlay() {
   }
 }
 
+function playerPlay() {
+  let playerSelection = prompt('Enter Rock, Paper, or Scissors:', 'Rock');
+
+  while (capitalize(playerSelection) !== 'Rock' &&
+  capitalize(playerSelection) !== 'Paper' &&
+  capitalize(playerSelection) !== 'Scissors') {
+    alert(`Your input '${playerSelection}' is invalid.`);
+    playerSelection = prompt('Enter Rock, Paper, or Scissors:', 'Rock');
+  }
+  return capitalize(playerSelection);
+}
+
 function playRound(playerSelection, computerSelection) {
-  playerSelection = capitalize(playerSelection);
+  //playerSelection = capitalize(playerSelection);
 
   if (playerSelection === 'Rock' && computerSelection === 'Scissors' ||
   playerSelection === 'Paper' && computerSelection === 'Rock' ||
