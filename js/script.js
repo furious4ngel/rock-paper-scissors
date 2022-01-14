@@ -2,11 +2,11 @@ function computerPlay() {
   let randomNumber = Math.floor(Math.random() * 100) + 1;
   
   if (randomNumber <= (1/3) * 100) {
-    return 'rock';
+    return 'Rock';
   } else if (randomNumber <= (2/3) * 100) {
-    return 'paper';
+    return 'Paper';
   } else {
-    return 'scissors';
+    return 'Scissors';
   }
 }
 
