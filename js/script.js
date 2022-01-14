@@ -10,3 +10,20 @@ function computerPlay() {
   }
 }
 
+function playRound(playerSelection, computerSelection) {
+  playerSelection = capitalize(playerSelection);
+
+  if (playerSelection === 'Rock' && computerSelection === 'Scissors' ||
+  playerSelection === 'Paper' && computerSelection === 'Rock' ||
+  playerSelection === 'Scissors' && computerSelection === 'Paper') {
+    //playerScore++;
+    console.log(`You win! ${playerSelection} beats ${computerSelection}!`);
+  } else if (computerSelection === 'Rock' && playerSelection === 'Scissors' ||
+  computerSelection === 'Paper' && playerSelection === 'Rock' ||
+  computerSelection === 'Scissors' && playerSelection === 'Paper') {
+    //computerScore++;
+    console.log(`You lose! ${computerSelection} beats ${playerSelection}!`);
+  } else {
+    console.log(`Draw! You both chose ${computerSelection}!`);
+  }
+}
