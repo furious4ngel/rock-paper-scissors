@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function computerPlay() {
   let randomNumber = Math.floor(Math.random() * 100) + 1;
   
@@ -16,12 +19,12 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection === 'Rock' && computerSelection === 'Scissors' ||
   playerSelection === 'Paper' && computerSelection === 'Rock' ||
   playerSelection === 'Scissors' && computerSelection === 'Paper') {
-    //playerScore++;
+    playerScore++;
     return `You win! ${playerSelection} beats ${computerSelection}!`;
   } else if (computerSelection === 'Rock' && playerSelection === 'Scissors' ||
   computerSelection === 'Paper' && playerSelection === 'Rock' ||
   computerSelection === 'Scissors' && playerSelection === 'Paper') {
-    //computerScore++;
+    computerScore++;
     return `You lose! ${computerSelection} beats ${playerSelection}!`;
   } else {
     return `Draw! You both chose ${computerSelection}!`;
