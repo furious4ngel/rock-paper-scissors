@@ -15,13 +15,13 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === 'Rock' && computerSelection === 'Scissors' ||
-  playerSelection === 'Paper' && computerSelection === 'Rock' ||
-  playerSelection === 'Scissors' && computerSelection === 'Paper') {
+      playerSelection === 'Paper' && computerSelection === 'Rock' ||
+      playerSelection === 'Scissors' && computerSelection === 'Paper') {
     playerScore++;
     return `You win! ${playerSelection} beats ${computerSelection}!`;
   } else if (computerSelection === 'Rock' && playerSelection === 'Scissors' ||
-  computerSelection === 'Paper' && playerSelection === 'Rock' ||
-  computerSelection === 'Scissors' && playerSelection === 'Paper') {
+      computerSelection === 'Paper' && playerSelection === 'Rock' ||
+      computerSelection === 'Scissors' && playerSelection === 'Paper') {
     computerScore++;
     return `You lose! ${computerSelection} beats ${playerSelection}!`;
   } else {
