@@ -1,5 +1,5 @@
-let playerScore = 0;
-let computerScore = 0;
+let playerScore;
+let computerScore;
 
 function computerPlay() {
   let randomNumber = Math.floor(Math.random() * 100) + 1;
