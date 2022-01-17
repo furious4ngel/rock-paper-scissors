@@ -14,6 +14,8 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+  playerSelection = capitalize(playerSelection);
+
   if (playerSelection === 'Rock' && computerSelection === 'Scissors' ||
   playerSelection === 'Paper' && computerSelection === 'Rock' ||
   playerSelection === 'Scissors' && computerSelection === 'Paper') {
