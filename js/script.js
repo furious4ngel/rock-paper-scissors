@@ -28,10 +28,17 @@ function playRound(playerSelection, computerSelection) {
     return `Draw! You both chose ${computerSelection}!`;
   }
 }
+
+function resetGame() {
+  console.clear();
+  
+  playerScore = 0;
+  computerScore = 0;
+}
   
 function game() {
   console.clear();
-
+  
   for (let roundNumber = 1; roundNumber <= 5; roundNumber++) {
     let playerSelection = capitalize(prompt('Enter "Rock", "Paper", or "Scissors"', 'Rock'));
     let computerSelection = computerPlay();
