@@ -14,8 +14,6 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  playerSelection = capitalize(playerSelection);
-
   if (playerSelection === 'Rock' && computerSelection === 'Scissors' ||
   playerSelection === 'Paper' && computerSelection === 'Rock' ||
   playerSelection === 'Scissors' && computerSelection === 'Paper') {
@@ -35,7 +33,7 @@ function game() {
   console.clear();
   
   for (let roundNumber = 1; roundNumber <= 5; roundNumber++) {
-    let playerSelection = playerPlay();
+    let playerSelection = capitalize(prompt('Enter "Rock", "Paper", or "Scissors"', 'Rock'));
     let computerSelection = computerPlay();
 
     let roundResult = playRound(playerSelection, computerSelection);
