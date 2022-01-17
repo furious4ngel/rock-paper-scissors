@@ -37,7 +37,7 @@ function resetGame() {
 }
   
 function game() {
-  console.clear();
+  resetGame();
   
   for (let roundNumber = 1; roundNumber <= 5; roundNumber++) {
     let playerSelection = capitalize(prompt('Enter "Rock", "Paper", or "Scissors"', 'Rock'));
