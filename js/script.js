@@ -42,11 +42,11 @@ function game() {
   }
 
   if (playerScore > computerScore) {
-    console.log(`You win with the score ${playerScore}-${computerScore}!`);
+    console.log(`%cYou win with score ${playerScore}-${computerScore}!`, 'color: limegreen;');
   } else if (computerScore > playerScore) {
-    console.log(`You lost with the score ${playerScore}-${computerScore}!`);
+    console.log(`%cYou lost with score ${playerScore}-${computerScore}!`, 'color: red;');
   } else {
-    console.log(`It's a draw with the score ${playerScore}-${computerScore}!`);
+    console.log(`It's a draw with score ${playerScore}-${computerScore}!`);
   }
 }
 
