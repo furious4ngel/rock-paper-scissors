@@ -13,6 +13,13 @@ function computerPlay() {
   }
 }
 
+function capitalize(word) {
+  let lowerCaseWord = word.toLowerCase();
+  let firstChar = lowerCaseWord.charAt(0);
+  let firstCharUpperCase = firstChar.toUpperCase();
+  return lowerCaseWord.replace(firstChar, firstCharUpperCase);
+}
+
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === 'Rock' && computerSelection === 'Scissors' ||
       playerSelection === 'Paper' && computerSelection === 'Rock' ||
