@@ -46,7 +46,7 @@ function resetGame() {
 function game() {
   resetGame();
   
-  for (let roundNumber = 1; roundNumber <= 5; roundNumber++) {
+/*  for (let roundNumber = 1; roundNumber <= 5; roundNumber++) {
     let playerSelection = capitalize(prompt('Enter "Rock", "Paper", or "Scissors"', 'Rock'));
     let computerSelection = computerPlay();
 
@@ -54,7 +54,7 @@ function game() {
 
     console.log(`Round ${roundNumber}: ${roundResult}`);
   }
-
+*/
   if (playerScore > computerScore) {
     console.log(`%cYou win with score ${playerScore}-${computerScore}!`, 'color: limegreen;');
   } else if (computerScore > playerScore) {
