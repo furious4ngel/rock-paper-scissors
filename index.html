@@ -1,13 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html">
 <head>
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rock-Paper-Scissors Game</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Rock, Paper, Scissors</title>
 </head>
-
-<body>
+<body id="body" class="body">
+  <header>
+    <h1 class="page-title">Rock, Paper, Scissors</h1>
+  </header>
+  <main id="main" class="main">
+    <div id="dialog" class="dialog">
+      <div id="dialog-text" class="dialog-text">
+        <p class="dialog-title">This page says</p>
+        <p class="dialog-prompt">Select a button.</p>
+      </div>
+      <div class="buttons">
+        <button id="rock" class="button gray">Rock</button>
+        <button id="paper" class="button gray">Paper</button>
+        <button id="scissors" class="button gray">Scissors</button>
+      </div>
+    </div>
+    <div id="console" class="console">
+      <ul class="console-tabs">
+        <li class="tab inactive">Elements</li>
+        <li class="tab active">Console</li>
+        <li class="tab inactive">Sources</li>
+      </ul>
+      <div id="scores-container" class="scores-container">
+        <p id="player-score" class="score">You: 0</p>
+        <p id="computer-score" class="score">Computer: 0</p>
+      </div>
+      <div id="console-body" class="console-body">
+        <div id="input-container" class="input-container">
+          <label for="console-input" class="console-arrow">></label>
+          <input id="console-input" class="console-input" type="text">  
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="footer" class="footer">
+    <p>
+      Created by <a href="https://github.com/t4rantino" class="github-link">t4rantino</a>
+    </p>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 </html>

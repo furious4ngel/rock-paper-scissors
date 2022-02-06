@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+}
+
+.html {
+  height: 100vh;
+}
+
+.body {
+  height: 100%;
+  background-color: hsl(160, 20%, 60%);
+}
+
+.main {
+  align-content: space-between;
+}
+
+.page-title {
+  padding: 0 1rem;
+  font-size: 2rem;
+}
+
+/* Related selectors */
+.body,
+.main,
+.dialog,
+.buttons,
+.console,
+.console-tabs,
+.scores-container,
+.round-result-container,
+.input-container,
+.footer {
+  display: flex;
+}
+
+.input-container,
+.footer {
+  align-items: center;
+}
+
+.main,
+.console-body {
+  flex: 1;
+}
+
+.body,
+.dialog,
+.console {
+  flex-direction: column;
+}
+
+.main,
+.buttons,
+.scores-container {
+  flex-wrap: wrap;
+}
+
+.main,
+.buttons,
+.footer {
+  justify-content: center;
+}
+
+.body,
+.console-tabs,
+.console .tab,
+.score {
+  margin: 0;
+}
+
+.dialog-title,
+.console .log {
+  margin: 0.5rem 0;
+}
+
+.console,
+.console-input,
+.footer {
+  width: 100%;
+}
+
+.dialog-text,
+.console .tab,
+.score,
+.footer {
+  font-family: 'Roboto', sans-serif;
+}
+
+.page-title,
+.console-body,
+.console-input {
+  font-family: monospace;
+}
+
+.dialog-prompt,
+.console .tab,
+.score,
+.console .log,
+.console-arrow,
+.console-input {
+  font-size: 1rem;
+}
+
+.page-title,
+.footer {
+  text-align: center;
+}
+
+.tab.inactive,
+.score,
+.console-body,
+.console-input {
+  color: hsl(0, 0%, 70%);
+}
+
+.button.blue,
+.tab.active,
+.tab.inactive:hover,
+.footer,
+.github-link {
+  color: hsl(0, 100%, 100%);
+}
+
+.page-title,
+.dialog,
+.button.gray {
+  color: hsl(0, 0%, 20%);
+}
+
+.tab.inactive:hover,
+.console,
+.console-input {
+  background-color: hsl(0, 0%, 12%);
+}
+
+.console-tabs,
+.scores-container,
+.footer {
+  background-color: hsl(0, 0%, 20%);
+}
+
+.dialog,
+.button.gray {
+  background-color: hsl(0, 0%, 75%);
+}
+
+.button.blue,
+.console-input {
+  border: transparent;
+}
+
+.console-tabs,
+.scores-container {
+  outline: 0.1rem solid hsl(0, 0%, 25%);
+}
+
+.console .tab,
+.score {
+  padding: 0.5rem 0.9rem;
+  cursor: default;
+  list-style-type: none;
+}
+
+.round-result-container,
+.user-input-container {
+  justify-content: space-between;
+  border-bottom: 0.1rem solid hsl(0, 0%, 25%);
+}
+
+/* Dialog box */
+.dialog {
+  flex: 0 1 auto;
+  justify-content: space-around;
+  min-height: 11rem;
+  margin: 1.2rem;
+  padding: 1rem;
+  width: 27rem;
+  border: 0.1rem solid hsl(0, 0%, 50%);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem hsl(0, 0%, 20%);
+}
+
+.dialog-title {
+  font-size: 1.2rem;
+}
+
+.buttons {
+  gap: 0.5rem;
+}
+
+.button {
+  flex: none;
+  height: 2.3rem;
+  padding: 0.2rem;
+  width: 5rem;
+  border-radius: 0.25rem;
+  transition: background-color 250ms;
+}
+
+.button.gray {
+  border: 0.1rem solid hsl(0, 0%, 40%);
+}
+
+.button.blue {
+  background-color: hsl(212, 75%, 55%);
+}
+
+.button.gray:hover {
+  background-color: hsl(0, 0%, 70%);
+}
+
+.button.gray:active {
+  background-color: hsl(0, 0%, 60%);
+}
+
+.button.blue:hover {
+  background-color: hsl(212, 75%, 60%);
+}
+
+.button.blue:active {
+  background-color: hsl(212, 75%, 65%);
+}
+
+/* 'Browser console' */
+.console {
+  height: 45vh;
+}
+
+.console-tabs {
+  overflow-x: auto;
+  padding: 0;
+}
+
+.tab.active {
+  background-color: hsl(0, 0%, 0%);
+}
+
+.scores-container :first-child {
+  border-right: 0.1rem solid hsl(0, 0%, 25%);
+}
+
+.console-body {
+  overflow: auto;
+  outline: 0.1rem solid hsl(0, 0%, 20%);
+}
+
+.round-result-container-selected {
+  background-color: hsla(212, 75%, 60%, 0.3);
+  box-shadow: inset 0 0 0 0.05rem hsl(212, 75%, 60%);
+}
+
+.console .log {
+  padding: 0 1.5rem;
+  line-height: 1.5;
+}
+
+.console .log::selection {
+  background-color: hsl(0, 0%, 35%);
+}
+
+.round-result {
+  cursor: default;
+}
+
+.round-number {
+  text-decoration: underline;
+}
+
+.round-number:hover {
+  color: hsl(0, 0%, 90%);
+  cursor: pointer;
+}
+
+.console-arrow {
+  padding: 0.5rem 0.4rem;
+  font-weight: 900;
+  color: hsl(212, 75%, 60%);
+}
+
+.console-input:focus {
+  outline: none;
+}
+
+/* Bonus feature! */
+.user-input {
+  word-break: break-word;
+}
+
+/* Footer */
+.footer {
+  height: 2.5rem;
+}
