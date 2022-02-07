@@ -195,7 +195,7 @@
 .button {
   flex: none;
   height: 2.3rem;
-  padding: 0.2rem;
+  padding: 0.2rem 0.4rem;
   width: 5rem;
   border-radius: 0.25rem;
   transition: background-color 250ms;
@@ -206,7 +206,7 @@
 }
 
 .button.blue {
-  background-color: hsl(212, 75%, 55%);
+  background-color: hsl(212, 75%, 45%);
 }
 
 .button.gray:hover {
