@@ -69,11 +69,6 @@
   margin: 0;
 }
 
-.dialog-title,
-.console .log {
-  margin: 0.5rem 0;
-}
-
 .console,
 .console-input,
 .footer {
@@ -182,6 +177,7 @@
 }
 
 .dialog-title {
+  margin: 0.5rem 0;
   font-size: 1.2rem;
 }
 
@@ -251,7 +247,7 @@
 }
 
 .console .log {
-  padding: 0 1.5rem;
+  margin: 0.5rem 1.5rem;
   line-height: 1.5;
 }
 
