@@ -50,15 +50,15 @@ function game(roundResult) {
   const roundResultContainer = document.createElement('div');
   const endgameResultContainer = document.createElement('div');
 
-  roundResultContainer.setAttribute('class', 'round-result-container');
+  roundResultContainer.setAttribute('class', 'game-log-container');
   roundNumber.setAttribute('class', 'log round-number');
 
   roundResultContainer.addEventListener('click', e => {
-    e.currentTarget.classList.toggle('round-result-container-selected');
+    e.currentTarget.classList.toggle('game-log-container--selected');
   });
 
   endgameResultContainer.addEventListener('click', e => {
-    e.currentTarget.classList.toggle('round-result-container-selected');
+    e.currentTarget.classList.toggle('game-log-container--selected');
   });
 
   PLAYER_SCORE.textContent = `You: ${playerScore}`;
@@ -73,7 +73,7 @@ function game(roundResult) {
 
   if (playerScore === 5 || computerScore === 5) {
     endgameResult.setAttribute('class', 'log round-result');
-    endgameResultContainer.setAttribute('class', 'round-result-container')
+    endgameResultContainer.setAttribute('class', 'game-log-container')
     
     disableButtons();
 
