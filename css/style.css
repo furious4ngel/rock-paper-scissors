@@ -28,7 +28,7 @@
 .console,
 .console-tabs,
 .scores-container,
-.round-result-container,
+.game-log-container,
 .input-container,
 .footer {
   display: flex;
@@ -164,7 +164,7 @@
   list-style-type: none;
 }
 
-.round-result-container,
+.game-log-container,
 .user-input-container {
   justify-content: space-between;
   padding: 0.5rem 1.5rem;
@@ -248,7 +248,7 @@
   outline: 0.1rem solid hsl(0, 0%, 20%);
 }
 
-.round-result-container-selected {
+.game-log-container--selected {
   background-color: hsla(212, 75%, 60%, 0.3);
   box-shadow: inset 0 0 0 0.05rem hsl(212, 75%, 60%);
 }
