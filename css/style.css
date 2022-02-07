@@ -201,6 +201,10 @@
   transition: background-color 250ms;
 }
 
+.button--disabled {
+  opacity: 0.6;
+}
+
 .button.gray {
   border: 0.1rem solid hsl(0, 0%, 40%);
 }
