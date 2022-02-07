@@ -38,6 +38,12 @@ function playRound(playerSelection, computerSelection) {
   game(roundResult);
 }
 
+function disableButtons() {
+  rockBtn.disabled = true;
+  paperBtn.disabled = true;
+  scissorsBtn.disabled = true;
+}
+
 function game(roundResult) {
   const roundNumber = document.createElement('p');
   const endgameResult = document.createElement('p');
@@ -69,12 +75,8 @@ function game(roundResult) {
     endgameResult.setAttribute('class', 'log round-result');
     endgameResultContainer.setAttribute('class', 'round-result-container')
     
-    rockBtn.disabled = true;
-    paperBtn.disabled = true;
-    scissorsBtn.disabled = true;
+    disableButtons();
 
-    resetBtn.setAttribute('class', 'button blue');
-    resetBtn.textContent = 'Play Again';
     btnContainer.appendChild(resetBtn);
 
     if (playerScore > computerScore) {
@@ -82,10 +84,7 @@ function game(roundResult) {
     } else {
       endgameResult.textContent = 'Game over. You lose!';
     }
-    roundResultContainer.appendChild(roundResult);
-    roundResultContainer.appendChild(roundNumber);
     endgameResultContainer.appendChild(endgameResult);
-
     consoleBody.prepend(roundResultContainer);
     consoleBody.prepend(endgameResultContainer);
   }
@@ -107,78 +106,10 @@ const COMPUTER_SCORE = document.querySelector('#computer-score');
 const consoleBody = document.querySelector('#console-body');
 const inputContainer = document.querySelector('#input-container');
 
+resetBtn.setAttribute('class', 'button blue');
+resetBtn.textContent = 'Play Again';
+
 rockBtn.addEventListener('click', () => playRound('rock', computerPlay()));
 paperBtn.addEventListener('click', () => playRound('paper', computerPlay()));
 scissorsBtn.addEventListener('click', () => playRound('scissors', computerPlay()));
 resetBtn.addEventListener('click', () => location.reload());
-
-/* let playerScore;
-let computerScore;
-
-function computerPlay() {
-  let randomNumber = Math.floor(Math.random() * 100) + 1;
-  
-  if (randomNumber <= (1/3) * 100) {
-    return 'Rock';
-  } else if (randomNumber <= (2/3) * 100) {
-    return 'Paper';
-  } else {
-    return 'Scissors';
-  }
-}
-
-function capitalize(word) {
-  let lowerCaseWord = word.toLowerCase();
-  let firstChar = lowerCaseWord.charAt(0);
-  let firstCharUpperCase = firstChar.toUpperCase();
-  return lowerCaseWord.replace(firstChar, firstCharUpperCase);
-}
-
-function playRound(playerSelection, computerSelection) {
-  if (playerSelection === 'Rock' && computerSelection === 'Scissors' ||
-      playerSelection === 'Paper' && computerSelection === 'Rock' ||
-      playerSelection === 'Scissors' && computerSelection === 'Paper') {
-    playerScore++;
-    return `You win! ${playerSelection} beats ${computerSelection}!`;
-  } else if (computerSelection === 'Rock' && playerSelection === 'Scissors' ||
-      computerSelection === 'Paper' && playerSelection === 'Rock' ||
-      computerSelection === 'Scissors' && playerSelection === 'Paper') {
-    computerScore++;
-    return `You lose! ${computerSelection} beats ${playerSelection}!`;
-  } else {
-    return `Draw! You both chose ${computerSelection}!`;
-  }
-}
-
-function resetGame() {
-  console.clear();
-  
-  playerScore = 0;
-  computerScore = 0;
-}
-  
-function game() {
-  resetGame();
-  
-  for (let roundNumber = 1; roundNumber <= 5; roundNumber++) {
-    let playerSelection = capitalize(prompt('Enter "Rock", "Paper", or "Scissors"', 'Rock'));
-    let computerSelection = computerPlay();
-
-    let roundResult = playRound(playerSelection, computerSelection);
-
-    console.log(`Round ${roundNumber}: ${roundResult}`);
-  }
-
-  if (playerScore > computerScore) {
-    console.log(`%cYou win with score ${playerScore}-${computerScore}!`, 'color: limegreen;');
-  } else if (computerScore > playerScore) {
-    console.log(`%cYou lost with score ${playerScore}-${computerScore}!`, 'color: red;');
-  } else {
-    console.log(`It's a draw with score ${playerScore}-${computerScore}!`);
-  }
-}
-
-game();
-
-
- */
