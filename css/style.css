@@ -56,6 +56,11 @@
   flex-wrap: wrap;
 }
 
+.buttons,
+.round-log-container {
+  gap: 0.5rem;
+}
+
 .main,
 .buttons,
 .footer {
@@ -186,10 +191,6 @@
 
 .dialog-title {
   font-size: 1.2rem;
-}
-
-.buttons {
-  gap: 0.5rem;
 }
 
 .button {
