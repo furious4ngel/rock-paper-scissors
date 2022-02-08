@@ -103,7 +103,7 @@ function endGame() {
   if (playerPoints > computerPoints) {
     endGameResult.textContent = 'Game over. You win!';
   } else {
-    endGameResult.textContent = 'Game over. You lose';
+    endGameResult.textContent = 'Game over. You lose!';
   }
   
   endGameResultContainer.appendChild(endGameResult);
@@ -125,7 +125,7 @@ function playGame() {
       } else {
         playerSelection = 'scissors';
       }
-      
+
       displayRoundResult();
       displayScores();
       if (playerPoints === 5 || computerPoints === 5) {
