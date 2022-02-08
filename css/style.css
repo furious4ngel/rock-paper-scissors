@@ -169,8 +169,7 @@
   list-style-type: none;
 }
 
-.round-log-container,
-.user-input-container {
+.round-log-container {
   justify-content: space-between;
   padding: 0.5rem 1.5rem;
   border-bottom: 0.1rem solid hsl(0, 0%, 25%);
@@ -287,11 +286,6 @@
 
 .console-input:focus {
   outline: none;
-}
-
-/* Bonus feature! */
-.user-input {
-  word-break: break-word;
 }
 
 /* Footer */
