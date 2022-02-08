@@ -203,7 +203,6 @@
 
 .button--disabled {
   opacity: 0.4;
-  transition: opacity 500ms;
 }
 
 .button.gray {
